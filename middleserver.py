@@ -25,8 +25,7 @@ while True:
                 response += f.read(x)
             sock1.sendall((response).encode('ascii'))
             relayServer = sock1.recv(10000)
-            print('replay', relayServer)
-            
+            # print('replay', relayServer)
             client_sock.sendall((relayServer))
             print((data).decode('utf-8'))
         else:

@@ -10,7 +10,6 @@ while True:
     try:
         conn, addr = sock.accept()
         pid = os.fork()
-
         if pid == 0:
             while True:
                 try:
